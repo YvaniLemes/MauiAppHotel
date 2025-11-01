@@ -6,11 +6,81 @@
              NavigationPage.HasNavigationBar = "False"
              BackgroundColor="{StaticResource Magenta}">
 
+    <ContentPage.Content>
+        <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10" Spacing="10">
+            <Label Text="Cálculo da Diária!"
+           FontFamily="Kalam" 
+           FontSize="50"
+           TextColor="{StaticResource PrimaryDark}"
+           HorizontalOptions="Center"/>
 
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentPage>
+            <Frame Padding="10">
+    <VerticalStackLayout Spacing="10">
+
+                    <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*, *, 2*">
+
+                        <Label Grid.Row="0" Grid.Column="0"
+                           Text="Adultos: " />
+
+            <Label Grid.Row="0" Grid.Column="1"
+                           TextColor="{StaticResource PrimaryDarkText}"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_adultos}"/>
+
+                    <Stepper Grid.Row="0" Grid.Column="2"
+                     x:Name="stp_adultos"
+                     Minimum="0"
+                     Maximum="10"
+                     Increment="1"/>
+
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="Crianças: " />
+
+                    <Label Grid.Row="1" Grid.Column="1"
+                           TextColor="{StaticResource PrimaryDarkText}"
+                           Text="{Binding Value}"
+                           BindingContext="{Reference stp_criancas}"/>
+
+                    <Stepper Grid.Row="0" Grid.Column= "2"
+                            x:Name="stp_criancas"
+                            Minimum="0"
+                            Maximum="10"
+                            Increment="1"/>            
+
+                </Grid>
+                
+                <Label Text="Escolha sua Suíte"/>
+
+                <Picker x:Name="pck_quarto"
+                        Title="Selecione sua Acomodação"/>
+
+                    <Frame Padding="10" Margin="10">
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="Período da Estadia"/>
+                        </VerticalStackLayout>
+                    </Frame>
+        
+                    <HorizontalStackLayout>
+                        <Label Text="Check-in"/>
+                        <DatePicker x:Name="dtpck_checkin"
+                                    Format="dd/mm/yyyy"/>
+                    </HorizontalStackLayout>
+
+
+                    <HorizontalStackLayout>
+                        <Label Text="Check-out"/>
+                        <DatePicker x:Name="dtpck_checkout"
+                Format="dd/mm/yyyy"/>
+                    </HorizontalStackLayout>
+
+            </VerticalStackLayout>        
+        </Frame>
+
+        <Button Text="Avançar"/>
+            
+        </VerticalStackLayout>
+    </ContentPage.Content>        
+    </ContentPage>
+
+ 
