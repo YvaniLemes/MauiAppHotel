@@ -20,6 +20,10 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
-    }
 
+        private async void OnSobreClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Sobre());
+        }
+    }
 }

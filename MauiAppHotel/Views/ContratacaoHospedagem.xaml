@@ -74,21 +74,18 @@
                 Format="dd/mm/yyyy"/>
                     </HorizontalStackLayout>
 
-            </VerticalStackLayout>        
-        </Frame>
+                    <!-- BOTÕES -->
+                    <Button Text="Avançar"/>
 
-        <Button Text="Avançar"/>
-
-        <Button Text="Sobre"
-        BackgroundColor="#4A148C"
-        TextColor="White"
-        CornerRadius="10"
-        Margin="0,10,0,0"
-        Clicked="OnSobreClicked"/>
-            
-        </VerticalStackLayout>
+                    <Button Text="Sobre"
+                            BackgroundColor="#4A148C"
+                            TextColor="White"
+                            CornerRadius="10"
+                            Margin="0,10,0,0"
+                            Clicked="OnSobreClicked"/>
         
-    </ContentPage.Content>        
-    </ContentPage>
-
- 
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>
