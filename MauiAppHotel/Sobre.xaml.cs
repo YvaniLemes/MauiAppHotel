@@ -9,7 +9,7 @@ namespace MauiAppHotel
 
         private async void OnVoltarClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Sobre());
+           
             await Navigation.PopAsync();
         }
     }

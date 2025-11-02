@@ -7,8 +7,11 @@ public partial class ContratacaoHospedagem : ContentPage
 		InitializeComponent();
 	}
 
-    private async void OnSobreClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("Sobre");
-    }
+	private async void OnSobreClicked(object sender, EventArgs e)
+
+	{
+		await Navigation.PushAsync(new Sobre());
+
+	}
+
 }
