@@ -75,7 +75,7 @@
                     </HorizontalStackLayout>
 
                     <!-- BOTÕES -->
-                    <Button Text="Avançar"/>
+                    <Button Text="Avançar" Clicked="Button_Clicked"/>
 
                     <Button Text="Sobre"
                             BackgroundColor="#4A148C"
