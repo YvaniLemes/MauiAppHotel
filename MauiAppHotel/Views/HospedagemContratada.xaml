@@ -12,6 +12,11 @@
                FontSize="50"
                HorizontalTextAlignment="Center"/>
 
+        <Image Source="suitesuperluxo.jpg"
+       WidthRequest="200"
+       HeightRequest="200"
+       Aspect="AspectFill" />
+        
         <Frame  Margin="10">
             <HorizontalStackLayout>
                 <Label Text="Adultos: "/>
