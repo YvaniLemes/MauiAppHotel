@@ -1,7 +1,7 @@
-﻿namespace MauiAppHotel.MainPage.Views
+﻿namespace MauiAppHotel.Views;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
-    {
     int count = 0;
 
     public MainPage()
@@ -21,8 +21,4 @@
         SemanticScreenReader.Announce(CounterBtn.Text);
     }
 
-    private async void OnSobreClicked(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new Sobre());
-    }
 }

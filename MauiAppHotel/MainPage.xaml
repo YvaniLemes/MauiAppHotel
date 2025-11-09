@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppHotel.MainPage.Views">
+             x:Class="MauiAppHotel.Views.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
+    <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
+        <Image
                 Source="dotnet_bot.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a race car number eight" />
 
-            <Label
+        <Label
                 Text="Hello, World!"
                 FontFamily="Kalam"
                 Style="{StaticResource Headline}"
@@ -32,9 +32,7 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
 
-            <Button Text="Sobre"
-            Clicked="OnSobreClicked" />
-
+            
         </VerticalStackLayout>
     </ScrollView>
 
