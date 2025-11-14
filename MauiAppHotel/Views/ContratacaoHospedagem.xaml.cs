@@ -42,7 +42,19 @@ namespace MauiAppHotel.Views
         {
             try
             {
-                await Navigation.PushAsync(new HospedagemContratada());
+                Hospedagem h = new Hospedagem
+                {
+                    QuartoSelecionado = (Quarto)pck_quarto.SelectedItem,
+                    QntAdultos = Convert.ToInt32(stp_adultos.Value),
+                    QntCriancas = Convert.ToInt32(stp_criancas.Value),
+                    DateCheckIn = dtpck_checkin.Date,
+                    DateCheckOut = dtpck_checkout.Date,
+                };
+
+                await Navigation.PushAsync(new HospedagemContratada()
+                {
+                    BindingContext = h
+                });
             }
             catch (Exception ex)
             {

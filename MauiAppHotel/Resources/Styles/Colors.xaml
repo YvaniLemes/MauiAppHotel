@@ -6,6 +6,24 @@
 
     <!-- Note: For Android please see also Platforms\Android\Resources\values\colors.xml -->
 
+    <Color x:Key="AzulClaro">LightBlue</Color>
+    <Color x:Key="AzulCeu">SkyBlue</Color>
+    <Color x:Key="AzulPetroleo">Teal</Color>
+    <Color x:Key="VerdeMenta">Green</Color>
+    <Color x:Key="VerdeOliva">Olive</Color>
+    <Color x:Key="RosaBebe">Pink</Color>
+    <Color x:Key="RosaChoque">HotPink</Color>
+    <Color x:Key="RoxoLavanda">Lavender</Color>
+    <Color x:Key="RoxoProfundo">Purple</Color>
+    <Color x:Key="AmareloPastel">Yellow</Color>
+    <Color x:Key="LaranjaQueimado">Orange</Color>
+    <Color x:Key="VermelhoCoral">Red</Color>
+    <Color x:Key="CinzaChumbo">Gray</Color>
+    <Color x:Key="CinzaClaro">LightGray</Color>
+    <Color x:Key="BegeAreia">Beige</Color>
+    <Color x:Key="BrancoGelo">White</Color>
+    <Color x:Key="PretoFosco">Black</Color>
+
     <Color x:Key="Primary">#512BD4</Color>
     <Color x:Key="PrimaryDark">#ac99ea</Color>
     <Color x:Key="PrimaryDarkText">#242424</Color>
