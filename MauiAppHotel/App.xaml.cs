@@ -9,27 +9,31 @@ namespace MauiAppHotel
         {
             new Quarto
             {
-                Descrição = "Suíte Super Luxo",
+                Descricao = "Suíte Super Luxo",
+                Imagem = "suitesuperluxo.jpg",
                 ValorDiariaAdulto = 110.0,
-                ValorDiariaCriança = 55.0
+                ValorDiariaCrianca = 55.0
             },
             new Quarto
             {
-                Descrição = "Suíte Luxo",
+                Descricao = "Suíte Luxo",
+                Imagem = "suiteluxo.jpg",
                 ValorDiariaAdulto = 80.0,
-                ValorDiariaCriança = 40.0
+                ValorDiariaCrianca = 40.0
             },
             new Quarto
             {
-                Descrição = "Suíte Single",
+                Descricao = "Suíte Single",
+                Imagem = "suitesingle.jpg",
                 ValorDiariaAdulto = 50.0,
-                ValorDiariaCriança = 25.0
+                ValorDiariaCrianca = 25.0
             },
             new Quarto
             {
-                Descrição = "Suíte Crise",
+                Descricao = "Suíte Crise",
+                Imagem = "suitecrise.jpg",
                 ValorDiariaAdulto = 25.0,
-                ValorDiariaCriança = 12.5
+                ValorDiariaCrianca = 12.5
             }
         };
 

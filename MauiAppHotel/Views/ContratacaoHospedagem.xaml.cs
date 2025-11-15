@@ -1,5 +1,5 @@
 using MauiAppHotel.Models;
-using MauiAppHotel.Views; // Certifique-se de importar a página Sobre
+using MauiAppHotel.Views;
 
 namespace MauiAppHotel.Views
 {
@@ -13,8 +13,10 @@ namespace MauiAppHotel.Views
 
             PropriedadesApp = (App)Application.Current;
 
+            // Carrega lista de quartos no Picker
             pck_quarto.ItemsSource = PropriedadesApp.lista_quartos;
 
+            // Configura datas
             dtpck_checkin.MinimumDate = DateTime.Now;
             dtpck_checkin.MaximumDate = DateTime.Now.AddMonths(1);
 
@@ -42,15 +44,32 @@ namespace MauiAppHotel.Views
         {
             try
             {
+                // Verifica se o quarto foi selecionado
+                if (pck_quarto.SelectedItem == null)
+                {
+                    await DisplayAlert("Atenção", "Selecione um quarto antes de continuar.", "OK");
+                    return;
+                }
+                Quarto quartoSelecionado = (Quarto)pck_quarto.SelectedItem;
+
+                // Cria hospedagem com dados da tela
                 Hospedagem h = new Hospedagem
                 {
-                    QuartoSelecionado = (Quarto)pck_quarto.SelectedItem,
+                    QuartoSelecionado = quartoSelecionado,
                     QntAdultos = Convert.ToInt32(stp_adultos.Value),
                     QntCriancas = Convert.ToInt32(stp_criancas.Value),
                     DateCheckIn = dtpck_checkin.Date,
                     DateCheckOut = dtpck_checkout.Date,
                 };
 
+
+                // Calcula estadia e valor total
+                int estadia = (h.DateCheckOut - h.DateCheckIn).Days;
+                double valorAdultos = h.QntAdultos * quartoSelecionado.ValorDiariaAdulto;
+                double valorCriancas = h.QntCriancas * quartoSelecionado.ValorDiariaCrianca;
+
+
+                // Navega para página de confirmação
                 await Navigation.PushAsync(new HospedagemContratada()
                 {
                     BindingContext = h
@@ -58,7 +77,7 @@ namespace MauiAppHotel.Views
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Ops", ex.Message, "Ok");
+                await DisplayAlert("Ops", $"Erro ao contratar hospedagem:\n{ex.Message}", "Ok");
             }
         }
 
@@ -70,9 +89,7 @@ namespace MauiAppHotel.Views
             dtpck_checkout.MaximumDate = dataSelecionada.AddMonths(6);
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
-        {
 
-        }
     }
 }
+
